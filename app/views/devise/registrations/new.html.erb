@@ -21,6 +21,12 @@
     <%= f.password_field :password_confirmation, autocomplete: "new-password" %>
   </div>
 
+  <div class="field">
+  <%= label_tag :organization, "Select Organization" %><br />
+  <%= select_tag :organization, options_for_select(Organization.pluck(:name)), prompt: 'Please select' %>
+</div>
+
+
   <div class="actions">
     <%= f.submit "Sign up" %>
   </div>
