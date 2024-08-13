@@ -1,2 +1,4 @@
 class Organization < ApplicationRecord
-end
+    validates :name, presence: true, uniqueness: true
+  end
+  
