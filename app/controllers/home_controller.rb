@@ -1,12 +1,10 @@
 class HomeController < ApplicationController
+  before_action :authenticate_user! 
+
   def index
-    if params[:organization_id].present?
-      @selected_organization = Organization.find(params[:organization_id])
-    else
-      @selected_organization = nil
-    end
   end
 
   def dashboard
+    @organization = current_user.organization
   end
 end

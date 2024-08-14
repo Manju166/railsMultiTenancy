@@ -11,10 +11,12 @@
     <%= f.password_field :password, autocomplete: "current-password" %>
   </div>
 
-  <div class="field">
-  <%= f.label :organization_id, "Select Organization" %><br />
-  <%= f.select :organization_id, options_from_collection_for_select(Organization.all, :id, :name, params[:organization_id]), prompt: 'Please select' %>
-</div>
+  <% if @organizations.present? %>
+    <div class="field">
+      <%= f.label :organization_id, 'Organization' %><br/>
+      <%= f.collection_select :organization_id, @organizations, :id, :name, prompt: 'Select an Organization', required: true %>
+    </div>
+  <% end %>
 
   <% if devise_mapping.rememberable? %>
     <div class="field">

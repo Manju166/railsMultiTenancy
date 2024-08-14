@@ -18,12 +18,11 @@
   </div>
 
   <div class="field">
-  <%= f.label :organization_id, "Select Organization" %><br />
-  <%= f.select :organization_id, options_from_collection_for_select(Organization.all, :id, :name, params[:organization_id]), prompt: 'Please select' %>
-</div>
+    <%= f.label :organization_id, 'Organization' %><br/>
+    <%= f.collection_select :organization_id, Organization.all, :id, :name, prompt: 'Select an Organization' %>
+  </div>
 
   <div class="actions">
     <%= f.submit "Sign up" %>
   </div>
 <% end %>
-
