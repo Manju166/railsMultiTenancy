@@ -1,8 +1,7 @@
-<p style="color: green"><%= notice %></p>
-
 <% content_for :title, "Posts" %>
 
-<h1>Posts</h1>
+<h1>Organization: <%= @organization.name %></h1>
+<h3>Posts</h3>
 
 <div id="posts">
   <% @posts.each do |post| %>

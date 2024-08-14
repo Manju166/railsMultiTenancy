@@ -6,5 +6,6 @@ class HomeController < ApplicationController
 
   def dashboard
     @organization = current_user.organization
+    @posts = @organization.posts
   end
 end

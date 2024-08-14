@@ -2,4 +2,7 @@
 <h1>Welcome to organizaztion</h1>
 <p>Organization: <%= @organization.name %></p>
 
-<%= link_to "Upload post", new_post_path, class:"nav-link" %>
+<%= link_to "Upload post", new_post_path, class:"btn btn-primary" %>
+<div>
+  <%= link_to "View all posts", posts_path %>
+</div>
