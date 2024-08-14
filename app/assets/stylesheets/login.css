@@ -1,0 +1,41 @@
+.container {
+    margin-top: 4rem;
+    display: flex;
+    justify-content: center;
+}
+
+.form-wrapper {
+    width: 50%;
+    margin: auto;
+}
+
+.form-wrapper h2 {
+    text-align: center;
+}
+
+.field {
+    margin-bottom: 0.5rem;
+}
+
+.field label {
+    display: block;
+}
+
+.field input[type="email"],
+.field input[type="password"],
+.field select  {
+    width: 100%;
+    padding: 0.5rem;
+    font-size: 1rem;
+}
+
+.actions {
+    text-align: center;
+    margin-top: 50px;
+}
+
+.actions input[type="submit"] {
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    cursor: pointer;
+}

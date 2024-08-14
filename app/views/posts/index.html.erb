@@ -3,7 +3,7 @@
 <h1>Organization: <%= @organization.name %></h1>
 <h3>Posts</h3>
 
-<div id="posts">
+<div id="posts" class="postpage">
   <% @posts.each do |post| %>
     <%= render post %>
     <p>
